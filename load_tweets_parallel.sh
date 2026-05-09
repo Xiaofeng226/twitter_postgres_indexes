@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 files='/data/tweets/geoTwitter21-01-01.zip
 /data/tweets/geoTwitter21-01-02.zip
@@ -14,9 +14,9 @@ files='/data/tweets/geoTwitter21-01-01.zip
 echo '================================================================================'
 echo 'load pg_denormalized'
 echo '================================================================================'
-time echo "$files" | parallel bash load_denormalized.sh
+time echo "$files" | parallel sh load_denormalized.sh
 
 echo '================================================================================'
 echo 'load pg_normalized_batch'
 echo '================================================================================'
-time echo "$files" | parallel python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:5321/postgres --inputs
+time echo "$files" | parallel python3 load_tweets_batch.py --db=postgresql://postgres:pass@localhost:5321/postgres --inputs
