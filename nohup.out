@@ -1,0 +1,20 @@
+time="2026-05-09T14:59:09-07:00" level=warning msg="/home/xiali/twitter_postgres_indexes/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+sql.denormalized/01.sql fail
+sql.denormalized/02.sql ERROR:  column "tag" does not exist
+LINE 14: WHERE tag LIKE '#%'
+               ^
+fail
+sql.denormalized/03.sql fail
+sql.denormalized/04.sql fail
+sql.denormalized/05.sql fail
+Command exited with non-zero status 2
+1.55user 0.53system 1:39:55elapsed 0%CPU (0avgtext+0avgdata 39680maxresident)k
+608inputs+40outputs (3major+9621minor)pagefaults 0swaps
+time="2026-05-09T16:46:38-07:00" level=warning msg="/home/xiali/twitter_postgres_indexes/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ count 
+-------
+  2442
+(1 row)
+
+time="2026-05-10T01:02:00-07:00" level=warning msg="/home/xiali/twitter_postgres_indexes/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+canceled
